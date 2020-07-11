@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f51ed0be-ab0e-431d-90fa-dbf4677a3b17}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>bin\segment_and_track.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\clustering.py" />
+    <Compile Include="bin\dataset.py" />
+    <Compile Include="bin\segment_and_track.py" />
+    <Compile Include="datasets\basic_dataset.py" />
+    <Compile Include="datasets\dataset_base.py" />
+    <Compile Include="datasets\debug_image_dataset.py" />
+    <Compile Include="datasets\graph_dataset.py" />
+    <Compile Include="datasets\__init__.py" />
+    <Compile Include="datasources\cached_image_datasource.py" />
+    <Compile Include="datasources\datasource_base.py" />
+    <Compile Include="datasources\image_datasource.py" />
+    <Compile Include="datasources\__init__.py" />
+    <Compile Include="generators\generator_base.py" />
+    <Compile Include="generators\image_generator.py" />
+    <Compile Include="generators\transformation_generator_base.py" />
+    <Compile Include="generators\__init__.py" />
+    <Compile Include="graph\node.py" />
+    <Compile Include="graph\run_graph.py" />
+    <Compile Include="graph\__init__.py" />
+    <Compile Include="tensorflow_train\layers\conv_lstm.py" />
+    <Compile Include="tensorflow_train\layers\initializers.py" />
+    <Compile Include="tensorflow_train\layers\layers.py" />
+    <Compile Include="tensorflow_train\layers\normalizers.py" />
+    <Compile Include="tensorflow_train\layers\__init__.py" />
+    <Compile Include="tensorflow_train\networks\unet_base.py" />
+    <Compile Include="tensorflow_train\networks\unet_lstm_dynamic.py" />
+    <Compile Include="tensorflow_train\networks\__init__.py" />
+    <Compile Include="tensorflow_train\utils\data_format.py" />
+    <Compile Include="tensorflow_train\utils\print_utils.py" />
+    <Compile Include="tensorflow_train\utils\tensorflow_util.py" />
+    <Compile Include="tensorflow_train\utils\__init__.py" />
+    <Compile Include="tensorflow_train\__init__.py" />
+    <Compile Include="transformations\intensity\base.py" />
+    <Compile Include="transformations\intensity\np\normalize.py" />
+    <Compile Include="transformations\intensity\np\shift_scale_clamp.py" />
+    <Compile Include="transformations\intensity\np\smooth.py" />
+    <Compile Include="transformations\intensity\np\__init__.py" />
+    <Compile Include="transformations\intensity\sitk\normalize.py" />
+    <Compile Include="transformations\intensity\sitk\shift_scale_clamp.py" />
+    <Compile Include="transformations\intensity\sitk\smooth.py" />
+    <Compile Include="transformations\intensity\sitk\__init__.py" />
+    <Compile Include="transformations\intensity\__init__.py" />
+    <Compile Include="transformations\spatial\base.py" />
+    <Compile Include="transformations\spatial\common.py" />
+    <Compile Include="transformations\spatial\composite.py" />
+    <Compile Include="transformations\spatial\deformation.py" />
+    <Compile Include="transformations\spatial\flip.py" />
+    <Compile Include="transformations\spatial\landmark.py" />
+    <Compile Include="transformations\spatial\rotation.py" />
+    <Compile Include="transformations\spatial\scale.py" />
+    <Compile Include="transformations\spatial\translation.py" />
+    <Compile Include="transformations\spatial\__init__.py" />
+    <Compile Include="transformations\__init__.py" />
+    <Compile Include="utils\batch_seed.py" />
+    <Compile Include="utils\image_tiler.py" />
+    <Compile Include="utils\io\common.py" />
+    <Compile Include="utils\io\image.py" />
+    <Compile Include="utils\io\text.py" />
+    <Compile Include="utils\io\__init__.py" />
+    <Compile Include="utils\mean_shift_cosine_gpu.py" />
+    <Compile Include="utils\np_image.py" />
+    <Compile Include="utils\random.py" />
+    <Compile Include="utils\sitk_image.py" />
+    <Compile Include="utils\sitk_np.py" />
+    <Compile Include="utils\timer.py" />
+    <Compile Include="utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin" />
+    <Folder Include="datasets" />
+    <Folder Include="datasources" />
+    <Folder Include="generators" />
+    <Folder Include="graph" />
+    <Folder Include="tensorflow_train" />
+    <Folder Include="tensorflow_train\layers" />
+    <Folder Include="tensorflow_train\networks" />
+    <Folder Include="tensorflow_train\utils" />
+    <Folder Include="transformations" />
+    <Folder Include="transformations\intensity" />
+    <Folder Include="transformations\intensity\np" />
+    <Folder Include="transformations\intensity\sitk" />
+    <Folder Include="transformations\spatial" />
+    <Folder Include="utils" />
+    <Folder Include="utils\io" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
