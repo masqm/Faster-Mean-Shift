@@ -1,8 +1,3 @@
-# Faster_Mean_Shift
-
-Faster Mean-shift algorithm for accelerating the recurrent neural network (RNN) based pixel embedding framework for holistic cell segmentation and tracking. Here is a brief introduction on how to run it.
-
-
 ##  Environment
 Win10
 
@@ -10,7 +5,7 @@ VS2019
 
 Anacoda 2020.02
 
-The packages requirement please see requirements.txt
+The packages requirement please see [requirements.txt](https://github.com/masqm/Faster_Mean_Shift/blob/master/requirements.txt "requirements.txt")
 
 
 ## Preparation
