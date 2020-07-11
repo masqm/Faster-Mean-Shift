@@ -266,13 +266,8 @@ class InstanceImageCreator(object):
         return np.array(labels)
 
     def get_cluster_labels(self, codes, shape, mask):
-        #seed_indizes = list(range(codes.shape[0]))
-        #shuffle(seed_indizes)
-        #seed_indizes = seed_indizes[:512]
-        #seeds = codes[seed_indizes]
 
         cluster = MeanShiftCosine(bandwidth=self.bandwidth, cluster_all=True, GPU=True)
-        #seeds=seeds, 
 
         #t0 = time.time()
         cluster.fit(codes)
