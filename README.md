@@ -1,3 +1,9 @@
+
+# Faster_Mean_Shift
+
+Faster Mean-shift algorithm for accelerating the recurrent neural network (RNN) based pixel embedding framework for holistic cell segmentation and tracking. Here is a brief introduction on how to run it.
+
+
 ##  Environment
 Win10
 
@@ -56,3 +62,5 @@ An example of how to using the algorithm is given below：
     
     #Obtain result
     labels  =  cluster.labels_
+
+If you encounter any problem or find a bug during using, you are very welcome to contact me by (Mengyang.Zhao@tufts.edu). If you use this code for your research, please cite our paper. Thanks!
