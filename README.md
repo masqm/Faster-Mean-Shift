@@ -30,13 +30,34 @@ The packages requirement please see requirements.txt
 ## Modify Variable
 In order to run the program, you need to modify some variables in segment_and_track.py
 
-input_image_folder = ***input_path***   %eg.*"E:/code/data/myfile/01"*
-
-output_folder = ***output_path***  %eg.*"E:/code/data/myfile/out"*
-
-model_file_name = ***model_path*** %eg.*"E:/code/data/myfile/01_model/DIC-C2DH-HeLa"*
-
-dataset_name = ***dataset_name*** %eg.*"DIC-C2DH-HeLa"*
+    input_image_folder = input_path		#eg."E:/code/data/myfile/01"
+    
+    output_folder = output_path 		#eg."E:/code/data/myfile/out"
+    
+    model_file_name = model_path		#eg."E:/code/data/myfile/01_model/DIC-C2DH-HeLa"
+    
+    dataset_name = dataset_name 		#eg."DIC-C2DH-HeLa"
 
 ## Testing
-We provided a vs2019 project file for testing. You can runing the program by excuate modified segment_and_track.py. 
+We provided a vs2019 project file for testing. You can runing the program by excuate modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our paper for specific performance data. 
+
+## Migration Algorithm
+You are very welcome to use our faster mean-shift algorithm to develop your program. The entire algorithm is based on the following two files:
+
+[mean_shift_cosine_gpu.py](https://github.com/masqm/Faster_Mean_Shift/blob/master/utils/mean_shift_cosine_gpu.py "mean_shift_cosine_gpu.py")
+
+[batch_seed.py](https://github.com/masqm/Faster_Mean_Shift/blob/master/utils/batch_seed.py "batch_seed.py")
+
+An example of using the algorithm is given below：
+
+    #Import our algorithm
+    from  utils.mean_shift_cosine_gpu  import  MeanShiftCosine
+    
+    #Configuration
+    cluster = MeanShiftCosine(bandwidth=0.1, cluster_all=True, GPU=True)
+    
+    #Clustering the vectors. x is input vector. The algorithm will it.
+    cluster.fit(x)
+    
+    #Obtain result
+    labels  =  cluster.labels_
