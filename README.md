@@ -48,7 +48,7 @@ You are very welcome to use our faster mean-shift algorithm to develop your prog
 
 [batch_seed.py](https://github.com/masqm/Faster_Mean_Shift/blob/master/utils/batch_seed.py "batch_seed.py")
 
-An example of using the algorithm is given below：
+An example of how to using the algorithm is given below：
 
     #Import our algorithm
     from  utils.mean_shift_cosine_gpu  import  MeanShiftCosine
