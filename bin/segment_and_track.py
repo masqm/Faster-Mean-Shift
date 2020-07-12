@@ -434,8 +434,8 @@ if __name__ == '__main__':
 
     input_image_folder = "E:/code/data/myfile/01"
     output_folder = "E:/code/data/myfile/out"
-    model_file_name = "E:/code/data/myfile/01_model/DIC-C2DH-HeLa"
-    dataset_name = "DIC-C2DH-HeLa"
+    model_file_name = "E:/code/data/myfile/01_model/PhC-C2DH-U373"
+    dataset_name = "PhC-C2DH-U373"
     
 
     loop = MainLoop(dataset_name,

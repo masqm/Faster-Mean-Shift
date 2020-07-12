@@ -36,8 +36,8 @@ from random import shuffle
 
 #seeds number intital
 SEED_NUM = 128
-#LL=8
-HL=32
+L=2
+H=8
 
 
 def estimate_bandwidth(X, quantile=0.3, n_samples=None, random_state=0, n_jobs=None):
@@ -112,10 +112,21 @@ def gpu_seed_adjust(codes):
     return gpu_seed_generator(codes)
 
 def get_N(P,r,I):
+
+    #There is no foreground instances
+    if r<0.1:
+        return 32 #Allocated some seeds at least
+
     lnp = math.log(P,math.e)
-    dem = num=math.log(1-math.e**(lnp/I),math.e)
-    num = math.log(1-r/I,math.e)
-    result = dem/num
+    num=math.log(1-math.e**(lnp/I),math.e)
+    den = math.log(1-r/I,math.e)
+    result = num/dem
+
+    if result<32:
+        result =32 #Allocated some seeds at least
+    elif result>256:
+        result =256 #Our GPU memory's max limitation, you can higher it.
+
     return int(result)
 
 
@@ -172,7 +183,8 @@ def mean_shift_cosine(X, bandwidth=None, seeds=None,
         if GPU == True:
             seeds = gpu_seed_generator(X)
             
-        
+    
+    #adjusted=False
     n_samples, n_features = X.shape
     center_intensity_dict = {}
     nbrs = NearestNeighbors(radius=bandwidth, metric='cosine').fit(X)
@@ -236,10 +248,11 @@ def mean_shift_cosine(X, bandwidth=None, seeds=None,
             N= get_N(0.95,r,dict_len)
 
             
-            if 2*N <= SEED_NUM: #safety area
+            if L*N <= SEED_NUM: #safety area
                 #SEED_NUM -= 200#test
-                if 8*N  <= SEED_NUM:
+                if H*N  <= SEED_NUM:
                     SEED_NUM -= N #seeds are too much, adjsut
+                
                 break
             else:
                 seeds = gpu_seed_adjust(X)#seeds are too few, adjsut
