@@ -29,7 +29,7 @@ The packages requirement please see [requirements.txt](https://github.com/masqm/
 （4）PhC-C2DH-U373
 
 ## Modify Variable
-In order to run the program, you need to modify some variables in segment_and_track.py
+In order to run the program, you need to modify some variables in [segment_and_track.py](https://github.com/masqm/Faster_Mean_Shift/blob/master/bin/segment_and_track.py "segment_and_track.py")
 
     input_image_folder = input_path		#eg."E:/code/data/myfile/01"
     
