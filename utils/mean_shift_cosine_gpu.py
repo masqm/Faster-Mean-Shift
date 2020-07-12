@@ -120,7 +120,7 @@ def get_N(P,r,I):
     lnp = math.log(P,math.e)
     num=math.log(1-math.e**(lnp/I),math.e)
     den = math.log(1-r/I,math.e)
-    result = num/dem
+    result = num/den
 
     if result<32:
         result =32 #Allocated some seeds at least
