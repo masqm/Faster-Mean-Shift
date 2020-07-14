@@ -28,7 +28,7 @@ The packages requirement please see [requirements.txt](https://github.com/masqm/
 
 （4）PhC-C2DH-U373
 
-For more data-set and model information, you can read our paper. The RNN framework are proposed by [Payer et al.](https://www.sciencedirect.com/science/article/pii/S136184151930057X?via%3Dihub)
+For more data-set and model information, you can read our paper. The RNN frameworks are proposed by [Payer et al.](https://www.sciencedirect.com/science/article/pii/S136184151930057X?via%3Dihub)
 
 ## Modify Variable
 In order to run the program, you need to modify some variables in [segment_and_track.py](https://github.com/masqm/Faster_Mean_Shift/blob/master/bin/segment_and_track.py "segment_and_track.py")
