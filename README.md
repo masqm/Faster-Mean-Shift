@@ -16,7 +16,7 @@ The packages requirement please see [requirements.txt](https://github.com/masqm/
 
 ## Preparation
 1. Download the datasets from the [celltracking challenge](http://www.celltrackingchallenge.net/) and extract them under an ***input_path***. 
-2. Download the corresponding trained model from my [Google Driver](???) and put them under a ***model_path***.
+2. Download the corresponding trained model from my [Google Driver](https://drive.google.com/drive/folders/1j1X0RFj0YOFYgKThM2p6HkEKxIQgtxo0?usp=sharing) and put them under a ***model_path***.
 3. Create a folder for ***output_path***
 4. Specify the ***dataset_name*** you want to run. Celltracking challenge provides 7 data-sets. We have tested four of them：
 
