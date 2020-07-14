@@ -59,10 +59,10 @@ An example of how to using the algorithm is given below：
     #Configuration
     cluster = MeanShiftCosine(bandwidth=0.1, cluster_all=True, GPU=True)
     
-    #Clustering the vectors. x is input vector. The algorithm will it.
+    #Clustering the vectors. x is input vectors. The algorithm will cluster them.
     cluster.fit(x)
     
-    #Obtain result
+    #Obtain results
     labels  =  cluster.labels_
 
 If you encounter any problem or find a bug during using, you are very welcome to contact me by (Mengyang.Zhao@tufts.edu). If you use this code for your research, please cite our paper. Thanks!
