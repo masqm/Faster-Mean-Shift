@@ -15,9 +15,9 @@ The packages requirement please see [requirements.txt](https://github.com/masqm/
 
 
 ## Preparation
-1. Download the datasets from the [celltracking challenge](http://www.celltrackingchallenge.net/) and extract them under a ***input_path***. 
+1. Download the datasets from the [celltracking challenge](http://www.celltrackingchallenge.net/) and extract them under an ***input_path***. 
 2. Download the corresponding trained model from my [Google Driver](???) and put them under a ***model_path***.
-3. Creat a folder for ***output_path***
+3. Create a folder for ***output_path***
 4. Specify the ***dataset_name*** you want to run. Celltracking challenge provides 7 data-sets. We have tested four of them：
 
 （1）DIC-C2DH-HeLa
@@ -40,7 +40,7 @@ In order to run the program, you need to modify some variables in [segment_and_t
     dataset_name = dataset_name 		#eg."DIC-C2DH-HeLa"
 
 ## Testing
-We provided a vs2019 project file for testing. You can runing the program by excuate modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our paper for specific performance data. 
+We provided a vs2019 project file for testing. You can run the program by executing the modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our paper for specific performance data. 
 
 ## Migration Algorithm
 You are very welcome to use our faster mean-shift algorithm to develop your program. The entire algorithm is based on the following two files:
