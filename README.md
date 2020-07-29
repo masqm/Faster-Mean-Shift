@@ -65,4 +65,4 @@ An example of how to using the algorithm is given below：
     #Obtain results
     labels  =  cluster.labels_
 
-If you encounter any problem or find a bug during using, you are very welcome to contact me by (Mengyang.Zhao@tufts.edu). If you use this code for your research, please cite our paper. Thanks!
+If you encounter any problem or find a bug during using, you are very welcome to contact me by (Mengyang.Zhao@tufts.edu). If you use this code for your research, please cite our [paper](https://arxiv.org/abs/2007.14283). Thanks!
