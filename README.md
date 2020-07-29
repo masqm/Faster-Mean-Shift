@@ -42,7 +42,7 @@ In order to run the program, you need to modify some variables in [segment_and_t
     dataset_name = dataset_name 		#eg."DIC-C2DH-HeLa"
 
 ## Testing
-We provided a vs2019 project file for testing. You can run the program by executing the modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our paper for specific performance data. 
+We provided a vs2019 project file for testing. You can run the program by executing the modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our [paper](https://arxiv.org/abs/2007.14283) for specific performance data. 
 
 ## Migration Algorithm
 You are very welcome to use our faster mean-shift algorithm to develop your program. The entire algorithm is based on the following two files:
