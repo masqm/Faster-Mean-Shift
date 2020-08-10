@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{f51ed0be-ab0e-431d-90fa-dbf4677a3b17}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>bin\segment_and_track.py</StartupFile>
+    <StartupFile>bin\postprocess.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -24,6 +24,9 @@
   <ItemGroup>
     <Compile Include="bin\clustering.py" />
     <Compile Include="bin\dataset.py" />
+    <Compile Include="bin\postprocess.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="bin\segment_and_track.py" />
     <Compile Include="datasets\basic_dataset.py" />
     <Compile Include="datasets\dataset_base.py" />
