@@ -1,4 +1,5 @@
 
+
 # Faster_Mean_Shift
 
 Faster Mean-shift algorithm for accelerating the recurrent neural network (RNN) based pixel embedding framework for holistic cell segmentation and tracking. Here is a brief introduction on how to run it.
@@ -43,6 +44,8 @@ In order to run the program, you need to modify some variables in [segment_and_t
 
 ## Testing
 We provided a vs2019 project file for testing. You can run the program by executing the modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our [paper](https://arxiv.org/abs/2007.14283) for specific performance data. 
+
+When you run the program, the result will be output in the ***output_path*** folder.  The result is a 16-bit mask, and the pixel value represents the label. If the result needs to be visualized in this step, you should assign a visible label for each pixel. A simple Histogram Equalization is recommended. We provide a [result check tool](https://github.com/masqm/Faster-Mean-Shift/blob/master/bin/postprocess.py) for specific output result based on automatic histogram equalization in OpenCV. And you can use Photoshop to complete batch processing.
 
 ## Migration Algorithm
 You are very welcome to use our faster mean-shift algorithm to develop your program. The entire algorithm is based on the following two files:
