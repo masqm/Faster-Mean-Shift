@@ -43,7 +43,7 @@ In order to run the program, you need to modify some variables in [segment_and_t
     dataset_name = dataset_name 		#eg."DIC-C2DH-HeLa"
 
 ## Testing
-We provided a vs2019 project file for testing. You can run the program by executing the modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our [paper](https://arxiv.org/abs/2007.14283) for specific performance data. 
+We provided a vs2019 project file for testing. You can run the program by executing the modified segment_and_track.py. We evaluated the time consumption and GPU memory requirement of the program. Please read our [paper](https://doi.org/10.1016/j.media.2021.102048) for specific performance data. 
 
 When you run the program, the result will be output in the ***output_path*** folder.  The result is a 16-bit mask, and the pixel value represents the label. If the result needs to be visualized in this step, you should assign a visible label for each pixel. A simple Histogram Equalization is recommended. We provide a [result check tool](https://github.com/masqm/Faster-Mean-Shift/blob/master/bin/postprocess.py) for specific output result based on automatic histogram equalization in OpenCV. And you can use Photoshop to complete batch processing.
 
