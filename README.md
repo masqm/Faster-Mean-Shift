@@ -29,7 +29,7 @@ The packages requirement please see [requirements.txt](https://github.com/masqm/
 
 （4）PhC-C2DH-U373
 
-For more data-set and model information, you can read our [paper](https://arxiv.org/abs/2007.14283). The RNN frameworks are proposed by [Payer et al.](https://www.sciencedirect.com/science/article/pii/S136184151930057X?via%3Dihub)
+For more data-set and model information, you can read our [paper](https://doi.org/10.1016/j.media.2021.102048). The RNN frameworks are proposed by [Payer et al.](https://www.sciencedirect.com/science/article/pii/S136184151930057X?via%3Dihub)
 
 ## Modify Variable
 In order to run the program, you need to modify some variables in [segment_and_track.py](https://github.com/masqm/Faster_Mean_Shift/blob/master/bin/segment_and_track.py "segment_and_track.py")
@@ -70,4 +70,4 @@ An example of how to using the algorithm is given below：
     #Obtain results
     labels  =  cluster.labels_
 
-If you encounter any problem or find a bug during using, you are very welcome to contact me by (Mengyang.Zhao@tufts.edu). If you use this code for your research, please cite our [paper](https://arxiv.org/abs/2007.14283). Thanks!
+If you encounter any problem or find a bug during using, you are very welcome to contact me by (Mengyang.Zhao@tufts.edu). If you use this code for your research, please cite our [paper](https://doi.org/10.1016/j.media.2021.102048). Thanks!
