@@ -194,7 +194,7 @@ def mean_shift_cosine(X, bandwidth=None, seeds=None,
     if GPU == True:
         #GPU ver
         while True:
-            labels, number = meanshift_torch(X, seeds, 0.1)#gpu calculation
+            labels, number = meanshift_torch(X, seeds, bandwidth)#gpu calculation
             for i in range(len(number)):
                 if number[i] is not None:
                     center_intensity_dict[tuple(labels[i])] = number[i]#find out cluster
