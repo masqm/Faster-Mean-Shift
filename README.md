@@ -2,7 +2,7 @@
 
 # Faster_Mean_Shift
 
-GPU-based Faster Mean-shift algorithm for accelerating the recurrent neural network (RNN) based pixel embedding framework for holistic cell segmentation and tracking. Here is a brief introduction on how to run it.
+GPU accelerated Faster Mean-shift algorithm for speeding up the recurrent neural network (RNN) based pixel embedding framework for holistic cell segmentation and tracking. Here is a brief introduction on how to run it.
 
 A more commonly used Faster Mean-shift algorithm for Euclidean Distance clustering was developed. Please see [Faster-Mean-Shift-Euc](https://github.com/masqm/Faster-Mean-Shift-Euc).
 
